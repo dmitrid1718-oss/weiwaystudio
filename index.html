@@ -6,6 +6,9 @@
   <meta name="theme-color" content="#f7f6f2">
   <meta name="description" content="Wei Way Studio makes small reminders of joy for everyday life. Visit the WeiWayStudio shop on Etsy.">
   <title>Wei Way Studio — Small reminders of joy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       color-scheme: light;
@@ -65,12 +68,22 @@
       background: #fff;
       box-shadow: inset 0 0 0 1px rgba(20,20,20,.08);
     }
-    .brand-mark img {
+    .brand-mark svg {
       display: block;
       width: 100%;
       height: 100%;
-      max-width: none;
-      object-fit: contain;
+    }
+    .brand-mark circle {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.8;
+    }
+    .brand-mark .logo-script {
+      fill: currentColor;
+      font-family: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -.8px;
     }
     .brand-name { display: grid; gap: 3px; }
     .brand-name strong {
@@ -281,7 +294,12 @@
   <div class="announcement">Small reminders of joy, for everyday life</div>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Wei Way Studio home">
-      <span class="brand-mark"><img src="assets/weiway-logo-high-res.webp" alt=""></span>
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 100 100" focusable="false">
+          <circle cx="50" cy="50" r="43"></circle>
+          <text class="logo-script" x="50" y="57" text-anchor="middle">Wei Way</text>
+        </svg>
+      </span>
       <span class="brand-name"><strong>Wei Way</strong><span>Studio</span></span>
     </a>
     <nav class="nav" aria-label="Main navigation">
